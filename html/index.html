@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách tham gia đội RoBoCon Khoa CNTT</title>
+    <link rel="stysheet" href="css\bootstrap.min.css">
+    <link rel="stysheet" href="js\bootstrap.min.js">
+    <link rel="stysheet" href="js\jquery-3.7.1.min.js">
+    <link rel="stysheet" href="css\main.css">
+    <link rel="stysheet" href="js\script.js">
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="/HEADER.PNG"><br>
+        <button type="button">Đăng nhập</button>
+        <button tybe="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#registerModal">
+        Đăng ký</button>
+
+    </div class="modal fade" tabindex="-1" aria-labelledby="registerModdalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modalcontent">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Thông tin cá nhân</h5>
+                <button type="button" class="close" data-dismiss="mobal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+            </div>
+            <div>
+                <div class="modal-body">
+                    <form id="roboconForm">
+                        <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Họ và tên: Tran Anh Dung" required>
+                            <div class="error" id="nameError"></div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="lop">Lớp:</label>
+                            <input type="text" class="form-control" id="lop" placeholder="Lớp DHTMDT18B" required>
+                            <div class="error" id="lopError"></div>
+                            <div class="form-group">
+                                <label for="ngaythamgia">Ngày tham gia:</label>
+                                <input type="text" class="form-control" id="ngaythamgia" placeholder="mm/dd/yyyy" required>
+                                <div class="error" id="ngaythamgiaError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sodienthoai">Số điện thoại</label>
+                                <input type="text" class="form-control" id="sodienthoai" placeholder="0xx-xxx-xxxx" required>
+                                <div class="error" id="sodienthoaiError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">email:</label>
+                                <input type="text" class="form-control" id="email" placeholder="xxx@gmail.com" required>
+                                <div class="error" id="emailError"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="model-footer">
+                    <button type="button"> Lưu</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class=" table table-bordered" id="displayTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã thành viên</th>
+                <th>Họ tên</th>
+                <th>Lớp</th>
+                <th>Ngày tham gia</th>
+                <th>Điện thoại</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    </div>
+    <script src=""></script>
+    <script src=""></script>
+    <script src=""></script>
+
+</body>
+
+</html>
